@@ -36,14 +36,14 @@ var Markdown = (function () {
         get: function () {
             return this._pages;
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Object.defineProperty(Markdown.prototype, "raw", {
         get: function () {
             return this._raw;
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Markdown.prototype.parse = function (markdown) {

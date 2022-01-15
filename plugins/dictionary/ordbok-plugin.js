@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.ordbokPlugin = exports.DictionaryPlugin = void 0;
 var internals_1 = require("../../internals");
 var DictionaryPlugin = (function () {
     function DictionaryPlugin() {
