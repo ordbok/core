@@ -1,2 +1,4 @@
 /node_modules/
 /tests-build/
+
+.DS_Store

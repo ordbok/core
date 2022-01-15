@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>IAjaxError | ORDBOK Core API</title>
+	<title>IAjaxContext | ORDBOK Core API</title>
 	<meta name="description" content="Documentation for ORDBOK Core API">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -52,10 +52,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="iajaxerror.html">IAjaxError</a>
+					<a href="iajaxcontext.html">IAjaxContext</a>
 				</li>
 			</ul>
-			<h1>Interface IAjaxError</h1>
+			<h1>Interface IAjaxContext</h1>
 		</div>
 	</div>
 </header>
@@ -65,7 +65,7 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>Error during an Ajax request</p>
+						<p>Internal request context</p>
 					</div>
 				</div>
 			</section>
@@ -73,15 +73,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<a href="iajaxerror.html#error" class="tsd-signature-type">Error</a>
-					</li>
-					<li>
-						<a href="iajaxresponse.html" class="tsd-signature-type">IAjaxResponse</a>
-						<ul class="tsd-hierarchy">
-							<li>
-								<span class="target">IAjaxError</span>
-							</li>
-						</ul>
+						<span class="target">IAjaxContext</span>
 					</li>
 				</ul>
 			</section>
@@ -92,14 +84,16 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iajaxerror.html#error" class="tsd-kind-icon">Error</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="iajaxerror.html#message" class="tsd-kind-icon">message</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="iajaxerror.html#name" class="tsd-kind-icon">name</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="iajaxerror.html#result" class="tsd-kind-icon">result</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="iajaxerror.html#serverstatus" class="tsd-kind-icon">server<wbr>Status</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="iajaxerror.html#stack" class="tsd-kind-icon">stack</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="iajaxerror.html#timestamp" class="tsd-kind-icon">timestamp</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="iajaxerror.html#url" class="tsd-kind-icon">url</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iajaxcontext.html#ajax" class="tsd-kind-icon">ajax</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iajaxcontext.html#iscountingrequest" class="tsd-kind-icon">is<wbr>Counting<wbr>Request</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iajaxcontext.html#url" class="tsd-kind-icon">url</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Methods</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iajaxcontext.html#reject" class="tsd-kind-icon">reject</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iajaxcontext.html#resolve" class="tsd-kind-icon">resolve</a></li>
 							</ul>
 						</section>
 					</div>
@@ -108,111 +102,87 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="error" class="tsd-anchor"></a>
-					<h3>Error</h3>
-					<div class="tsd-signature tsd-kind-icon">Error<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">ErrorConstructor</span></div>
+					<a name="ajax" class="tsd-anchor"></a>
+					<h3>ajax</h3>
+					<div class="tsd-signature tsd-kind-icon">ajax<span class="tsd-signature-symbol">:</span> <a href="../classes/ajax.html" class="tsd-signature-type">AJAX</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in external file</li>
+							<li>Defined in <a href="https://github.com/ordbok/core/blob/master/sources/lib/ajax.ts#L16">sources/lib/ajax.ts:16</a></li>
 						</ul>
 					</aside>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-					<a name="message" class="tsd-anchor"></a>
-					<h3>message</h3>
-					<div class="tsd-signature tsd-kind-icon">message<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="iscountingrequest" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> is<wbr>Counting<wbr>Request</h3>
+					<div class="tsd-signature tsd-kind-icon">is<wbr>Counting<wbr>Request<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="iajaxerror.html">IAjaxError</a>.<a href="iajaxerror.html#message">message</a></p>
 						<ul>
-							<li>Defined in external file</li>
+							<li>Defined in <a href="https://github.com/ordbok/core/blob/master/sources/lib/ajax.ts#L17">sources/lib/ajax.ts:17</a></li>
 						</ul>
 					</aside>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-					<a name="name" class="tsd-anchor"></a>
-					<h3>name</h3>
-					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
-					<aside class="tsd-sources">
-						<p>Inherited from <a href="iajaxerror.html">IAjaxError</a>.<a href="iajaxerror.html#name">name</a></p>
-						<ul>
-							<li>Defined in external file</li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-					<a name="result" class="tsd-anchor"></a>
-					<h3>result</h3>
-					<div class="tsd-signature tsd-kind-icon">result<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>Result body send by the server</p>
-						</div>
-					</div>
-					<aside class="tsd-sources">
-						<p>Inherited from <a href="iajaxerror.html">IAjaxError</a>.<a href="iajaxerror.html#result">result</a></p>
-						<ul>
-							<li>Defined in <a href="https://github.com/ordbok/core/blob/master/sources/lib/ajax.ts#L44">sources/lib/ajax.ts:44</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-					<a name="serverstatus" class="tsd-anchor"></a>
-					<h3>server<wbr>Status</h3>
-					<div class="tsd-signature tsd-kind-icon">server<wbr>Status<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>HTTP status code send by the server</p>
-						</div>
-					</div>
-					<aside class="tsd-sources">
-						<p>Inherited from <a href="iajaxerror.html">IAjaxError</a>.<a href="iajaxerror.html#serverstatus">serverStatus</a></p>
-						<ul>
-							<li>Defined in <a href="https://github.com/ordbok/core/blob/master/sources/lib/ajax.ts#L49">sources/lib/ajax.ts:49</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-					<a name="stack" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> stack</h3>
-					<div class="tsd-signature tsd-kind-icon">stack<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
-					<aside class="tsd-sources">
-						<p>Inherited from <a href="iajaxerror.html">IAjaxError</a>.<a href="iajaxerror.html#stack">stack</a></p>
-						<ul>
-							<li>Defined in external file</li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-					<a name="timestamp" class="tsd-anchor"></a>
-					<h3>timestamp</h3>
-					<div class="tsd-signature tsd-kind-icon">timestamp<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>Timestamp for the response event</p>
-						</div>
-					</div>
-					<aside class="tsd-sources">
-						<p>Inherited from <a href="iajaxerror.html">IAjaxError</a>.<a href="iajaxerror.html#timestamp">timestamp</a></p>
-						<ul>
-							<li>Defined in <a href="https://github.com/ordbok/core/blob/master/sources/lib/ajax.ts#L54">sources/lib/ajax.ts:54</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="url" class="tsd-anchor"></a>
 					<h3>url</h3>
 					<div class="tsd-signature tsd-kind-icon">url<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>URL of the server request</p>
-						</div>
-					</div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="iajaxerror.html">IAjaxError</a>.<a href="iajaxerror.html#url">url</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/ordbok/core/blob/master/sources/lib/ajax.ts#L59">sources/lib/ajax.ts:59</a></li>
+							<li>Defined in <a href="https://github.com/ordbok/core/blob/master/sources/lib/ajax.ts#L18">sources/lib/ajax.ts:18</a></li>
 						</ul>
 					</aside>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="reject" class="tsd-anchor"></a>
+					<h3>reject</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">reject<span class="tsd-signature-symbol">(</span>error<span class="tsd-signature-symbol">: </span><a href="iajaxerror.html" class="tsd-signature-type">IAjaxError</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>error: <a href="iajaxerror.html" class="tsd-signature-type">IAjaxError</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns
+								<span class="tsd-signature-type">void</span>
+							</h4>
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/ordbok/core/blob/master/sources/lib/ajax.ts#L20">sources/lib/ajax.ts:20</a></li>
+								</ul>
+							</aside>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="resolve" class="tsd-anchor"></a>
+					<h3>resolve</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">resolve<span class="tsd-signature-symbol">(</span>response<span class="tsd-signature-symbol">: </span><a href="iajaxresponse.html" class="tsd-signature-type">IAjaxResponse</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>response: <a href="iajaxresponse.html" class="tsd-signature-type">IAjaxResponse</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns
+								<span class="tsd-signature-type">void</span>
+							</h4>
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/ordbok/core/blob/master/sources/lib/ajax.ts#L19">sources/lib/ajax.ts:19</a></li>
+								</ul>
+							</aside>
+						</li>
+					</ul>
 				</section>
 			</section>
 		</div>
@@ -235,42 +205,33 @@
 					<li class=" tsd-kind-class">
 						<a href="../classes/markdown.html" class="tsd-kind-icon">Markdown</a>
 					</li>
-					<li class=" tsd-kind-interface">
-						<a href="iajaxcontext.html" class="tsd-kind-icon">IAjax<wbr>Context</a>
-					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface">
-						<a href="iajaxerror.html" class="tsd-kind-icon">IAjax<wbr>Error</a>
+						<a href="iajaxcontext.html" class="tsd-kind-icon">IAjax<wbr>Context</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="iajaxerror.html#error" class="tsd-kind-icon">Error</a>
+								<a href="iajaxcontext.html#ajax" class="tsd-kind-icon">ajax</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-								<a href="iajaxerror.html#message" class="tsd-kind-icon">message</a>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="iajaxcontext.html#iscountingrequest" class="tsd-kind-icon">is<wbr>Counting<wbr>Request</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-								<a href="iajaxerror.html#name" class="tsd-kind-icon">name</a>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="iajaxcontext.html#url" class="tsd-kind-icon">url</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-								<a href="iajaxerror.html#result" class="tsd-kind-icon">result</a>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="iajaxcontext.html#reject" class="tsd-kind-icon">reject</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-								<a href="iajaxerror.html#serverstatus" class="tsd-kind-icon">server<wbr>Status</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-								<a href="iajaxerror.html#stack" class="tsd-kind-icon">stack</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-								<a href="iajaxerror.html#timestamp" class="tsd-kind-icon">timestamp</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-								<a href="iajaxerror.html#url" class="tsd-kind-icon">url</a>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="iajaxcontext.html#resolve" class="tsd-kind-icon">resolve</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
+					<li class=" tsd-kind-interface">
+						<a href="iajaxerror.html" class="tsd-kind-icon">IAjax<wbr>Error</a>
+					</li>
 					<li class=" tsd-kind-interface">
 						<a href="iajaxrequest.html" class="tsd-kind-icon">IAjax<wbr>Request</a>
 					</li>

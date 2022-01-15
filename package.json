@@ -9,21 +9,20 @@
     "name": "@ordbok/core",
     "repository": "https://github.com/ordbok/core.git",
     "types": "index.d.ts",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "bin": {
         "ordbok-assembler": "bin/ordbok-assembler.js"
     },
-    "dependencies": {},
     "devDependencies": {
         "@ordbok/typedoc-theme": "~0.6.0",
-        "@types/node": "^10.0.0",
-        "browserify": "^16.5.0",
-        "husky": "~3.0.9",
-        "typedoc": "~0.15.2",
-        "typescript": "~3.7.2"
+        "@types/node": "^14.10.3",
+        "browserify": "^17.0.0",
+        "husky": "~7.0.4",
+        "typescript": "~3.9.10",
+        "typescriptlibs.typedoc": "github:typescriptlibs/typescriptlibs.typedoc#v0.19.3"
     },
     "engines": {
-        "node": ">=10.0.0"
+        "node": ">=14.10.0"
     },
     "files": [
         "bin/",
@@ -54,7 +53,7 @@
         "build-1": "tsc --build sources/tsconfig/*.json",
         "build-2": "chmod +x bin/ordbok-assembler.js",
         "build-3": "browserify --outfile client/ordbok-core.js --standalone OrdbokCore index.js",
-        "build-4": "cd sources/tsconfig && typedoc --out ../../docs --tsconfig typedoc.json",
+        "build-4": "cd sources/tsconfig && tsl-typedoc --out ../../docs --tsconfig tsl-typedoc.json",
         "clean": "rm -rf $(< .clean)",
         "release": "npm publish --access=public --tag next",
         "release-as-stable": "npm publish --access=public",
