@@ -9,7 +9,7 @@
     "name": "@ordbok/core",
     "repository": "https://github.com/ordbok/core.git",
     "types": "index.d.ts",
-    "version": "0.2.1",
+    "version": "0.2.2",
     "bin": {
         "ordbok-assembler": "bin/ordbok-assembler.js"
     },
@@ -36,7 +36,7 @@
         "index.js",
         "internals.d.ts",
         "internals.js",
-        "LICENSE",
+        "LICENSE.md",
         "README.md"
     ],
     "husky": {
