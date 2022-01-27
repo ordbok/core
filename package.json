@@ -36,7 +36,7 @@
         "index.js",
         "internals.d.ts",
         "internals.js",
-        "LICENSE",
+        "LICENSE.md",
         "README.md"
     ],
     "husky": {
