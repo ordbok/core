@@ -15,9 +15,9 @@
     },
     "devDependencies": {
         "@ordbok/typedoc-theme": "~0.6.0",
-        "@types/node": "^14.10.3",
+        "@types/node": "^14.10.0",
         "browserify": "^17.0.0",
-        "husky": "^8.0.3",
+        "husky": "^9.0.7",
         "typescript": "~3.9.10",
         "typescriptlibs.typedoc": "github:typescriptlibs/typescriptlibs.typedoc#v0.19.3"
     },
