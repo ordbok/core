@@ -9,7 +9,7 @@
     "name": "@ordbok/core",
     "repository": "https://github.com/ordbok/core.git",
     "types": "index.d.ts",
-    "version": "0.2.2",
+    "version": "0.2.3",
     "bin": {
         "ordbok-assembler": "bin/ordbok-assembler.js"
     },
