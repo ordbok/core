@@ -1,0 +1,14 @@
+{
+    "extends": "../tsconfig.json",
+    "compilerOptions": {
+        "module": "amd",
+        "outFile": "../../client/ordbok-core.js"
+    },
+    "exclude": [
+        "../**/ordbok-plugin.ts",
+        "../tsconfig/"
+    ],
+    "include": [
+        "../**/*.ts"
+    ]
+}
