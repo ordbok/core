@@ -67,24 +67,23 @@
 				<a href="#how-to-use" id="how-to-use" style="color: inherit; text-decoration: none;">
 					<h2>How to use</h2>
 				</a>
-				<p>The following example shows a Markdown source file named <code>english.md</code>:</p>
-				<pre><code class="language-md"><span class="hljs-section">English
-=======</span>
-
-Translation: English ; the English
-
-Grammar:     Noun ; Neuter
-
-<span class="hljs-section">New Norwegian
-=============</span>
-
-Translation: engelsk ; engelsken
-
-Grammar:     Noun ; Masculine
-</code></pre>
-				<p>The following example takes a Markdown source folder to build dictionary files
-				into a <code>./build/dictionary</code> folder:</p>
-				<pre><code class="language-sh">$ npx ordbok-assembler ./markdown ./build/dictionary
+				<a href="#the-following-example-shows-a-markdown-source-file-named-englishmd-md-english" id="the-following-example-shows-a-markdown-source-file-named-englishmd-md-english" style="color: inherit; text-decoration: none;">
+					<h1>The following example shows a Markdown source file named <code>english.md</code>:
+						```md
+					English</h1>
+				</a>
+				<p>Translation: English ; the English</p>
+				<p>Grammar:     Noun ; Neuter</p>
+				<a href="#new-norwegian" id="new-norwegian" style="color: inherit; text-decoration: none;">
+					<h1>New Norwegian</h1>
+				</a>
+				<p>Translation: engelsk ; engelsken</p>
+				<p>Grammar:     Noun ; Masculine</p>
+				<pre><code>
+The following example takes <span class="hljs-keyword">a</span> Markdown source <span class="hljs-built_in">folder</span> <span class="hljs-built_in">to</span> build dictionary <span class="hljs-built_in">files</span>
+<span class="hljs-keyword">into</span> <span class="hljs-keyword">a</span> `./build/dictionary` <span class="hljs-built_in">folder</span>:
+```sh
+$ npx ordbok-assembler ./markdown ./build/dictionary
 </code></pre>
 				<p>The following TypeScript code uses the dictionary files to find a translation:</p>
 				<pre><code class="language-ts"><span class="hljs-keyword">import</span> { <span class="hljs-title class_">Dictionary</span>, <span class="hljs-title class_">Utilities</span> } <span class="hljs-keyword">from</span> <span class="hljs-string">`@ordbok/core`</span>;
@@ -114,9 +113,9 @@ Grammar:     Noun ; Masculine
 				<pre><code class="language-ts"><span class="hljs-keyword">const</span> { <span class="hljs-title class_">IMarkdownPage</span>, <span class="hljs-title class_">IPlugin</span>, <span class="hljs-title class_">Markdown</span> } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;@ordbok/core/internals&#x27;</span>);
 
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> <span class="hljs-attr">ordbokPlugin</span>: <span class="hljs-title class_">IPlugin</span> = {
-    <span class="hljs-attr">onAssembling</span>: <span class="hljs-function">(<span class="hljs-params">sourceFolder: <span class="hljs-built_in">string</span>, targetFolder: <span class="hljs-built_in">string</span></span>) =&gt;</span> {},
-    <span class="hljs-attr">onReadFile</span>: <span class="hljs-function">(<span class="hljs-params">sourceFile: <span class="hljs-built_in">string</span>, markdown: Markdown</span>) =&gt;</span> {},
-    <span class="hljs-attr">onWriteFile</span>: <span class="hljs-function">(<span class="hljs-params">targetFile: <span class="hljs-built_in">string</span>, markdownPage: IMarkdownPage</span>) =&gt;</span> {},
+    <span class="hljs-attr">onAssembling</span>: <span class="hljs-function">(<span class="hljs-params"><span class="hljs-attr">sourceFolder</span>: <span class="hljs-built_in">string</span>, <span class="hljs-attr">targetFolder</span>: <span class="hljs-built_in">string</span></span>) =&gt;</span> {},
+    <span class="hljs-attr">onReadFile</span>: <span class="hljs-function">(<span class="hljs-params"><span class="hljs-attr">sourceFile</span>: <span class="hljs-built_in">string</span>, <span class="hljs-attr">markdown</span>: <span class="hljs-title class_">Markdown</span></span>) =&gt;</span> {},
+    <span class="hljs-attr">onWriteFile</span>: <span class="hljs-function">(<span class="hljs-params"><span class="hljs-attr">targetFile</span>: <span class="hljs-built_in">string</span>, <span class="hljs-attr">markdownPage</span>: <span class="hljs-title class_">IMarkdownPage</span></span>) =&gt;</span> {},
     <span class="hljs-attr">onAssembled</span>: <span class="hljs-function">() =&gt;</span> {}
 };
 </code></pre>
