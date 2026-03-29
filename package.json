@@ -18,7 +18,7 @@
         "@types/node": "^14.10.0",
         "husky": "^9.0.7",
         "typescript": "~3.9.10",
-        "typescriptlibs.typedoc": "github:typescriptlibs/typescriptlibs.typedoc#v0.19.6"
+        "typescriptlibs.typedoc": "github:typescriptlibs/typescriptlibs.typedoc#v0.19.7"
     },
     "engines": {
         "node": ">=14.10.0"
